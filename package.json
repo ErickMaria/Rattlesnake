@@ -1,0 +1,28 @@
+{
+  "name": "rattlesnake",
+  "version": "1.0.0",
+  "description": "Slack Bot to execute commands into kubernetes containers",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickMaria/Rattlesnake.git"
+  },
+  "keywords": [
+    "slack bot",
+    "kubenetes api"
+  ],
+  "author": "Erick Maria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErickMaria/Rattlesnake/issues"
+  },
+  "homepage": "https://github.com/ErickMaria/Rattlesnake#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "slackbots": "^1.2.0",
+    "wscat": "^2.2.1"
+  }
+}
