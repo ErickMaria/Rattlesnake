@@ -1,8 +1,9 @@
-import { Controller } from "./Controller";
+import { IController } from "./IController";
 import { Request, Response, NextFunction } from 'express';
 
-export class EventsController extends Controller{
-    public get(req : Request, res: Response): any{
+export class EventsController implements IController{
+    
+    public post(req : Request, res: Response): any{
         res.send({'message': 'events'});
     }
 

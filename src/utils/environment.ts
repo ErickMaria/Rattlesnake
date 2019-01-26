@@ -4,6 +4,6 @@ import * as fs from 'fs';
 
 export class EnvConfig {
     public static get(){
-        return dotenv.parse(fs.readFileSync(path.join(__dirname, "../../.env") ) );;
+        return dotenv.parse(fs.readFileSync(path.join(__dirname, "../../.env") ) );
     }
 }

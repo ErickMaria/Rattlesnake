@@ -2,6 +2,7 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { actionRoute } from './routes/action.route';
 import { eventsRoute } from './routes/events.router';
+import { Bot } from './core/bot';
 
 export class Application {
     
@@ -11,6 +12,7 @@ export class Application {
         this.app = express();
         this.config();
         this.router();
+        Bot.run();
     }
 
     public static bootstrap(): Application {
@@ -23,8 +25,8 @@ export class Application {
     }
 
     public router(){
-        this.app.use('/action', actionRoute);
-        this.app.use('/events', eventsRoute)
+        this.app.use('/slack/action', actionRoute);
+        this.app.use('/slack/events', eventsRoute)
     }
 
 }
