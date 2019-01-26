@@ -2,10 +2,10 @@
   "name": "rattlesnake",
   "version": "1.0.0",
   "description": "Slack Bot to execute commands into kubernetes containers",
-  "main": "./build/app.js",
+  "main": "./dist/app.js",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon -e '*' --watch ./src --exec 'npm run build && node ./build/bin/server.js' "
+    "dev": "nodemon -e '*' --watch ./src --exec 'npm run build && node ./dist/bin/server.js' "
   },
   "repository": {
     "type": "git",
