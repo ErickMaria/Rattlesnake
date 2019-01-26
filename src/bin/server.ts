@@ -1,24 +1,10 @@
-import * as express from 'express';
-import * as bodyParser from 'body-parser';
+import { Application } from "../app";
+import { EnvConfig } from "../utils/environment";
 
-export class Server {
-    
-    public app: express.Application;
+const app = Application.bootstrap().app;
+const PORT = parseInt(EnvConfig.get()['PORT']);
+const HOST = EnvConfig.get()['HOST'];
 
-    constructor(){
-        this.app = express();
-        this.config();
-    }
-
-    public static bootstrap(): Server {
-        return new Server();
-    }
-
-    public config(){
-        // parse application/x-www-form-urlencoded
-        this.app.use(bodyParser.urlencoded({ extended: false }))
-        // parse application/json
-        this.app.use(bodyParser.json())
-    }
-
-}
+app.listen(PORT, HOST, () =>{
+    console.log(`Server runnig on http://${HOST}:${PORT}`);
+});
