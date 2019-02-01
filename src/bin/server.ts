@@ -1,10 +1,13 @@
-import { Application } from "../app";
-import { EnvConfig } from "../utils/environment";
+const http = require('http');
 
-const app = Application.bootstrap().app;
+import { EnvConfig } from "../utils/environment";
+import { Application } from '../application'
+
+const app = Application.bootstrap();
+
 const PORT = parseInt(EnvConfig.get()['PORT']);
 const HOST = EnvConfig.get()['HOST'];
 
-app.listen(PORT, HOST, () =>{
-    console.log(`Server runnig on http://${HOST}:${PORT}`);
+http.createServer(app).listen(PORT, () => {
+  console.log(`server listening on port ${PORT}`);
 });
