@@ -11,15 +11,19 @@ export class RattleSnakeBase {
     public eventsRouter: express.Router;
 
     constructor(){
-        this.app. = express();
+        this.app = express();
         this.config();
         this.routes();
     }
 
     public routes(){
-        this.app.use(`/${ConfigENV.get()['API_VERSION']}/slack/actions`, this.actionsRouter);
+        this.app.use(`/${ConfigENV.get()['API_VERSION']}/slack/actions`, () => {
 
-        //sthis.app.use(`/${ConfigENV.get()['API_VERSION']}/slack/events`, this.eventsRouter);
+        });
+
+        this.app.use(`/${ConfigENV.get()['API_VERSION']}/slack/events`, () => {
+
+        });
 
     };
 
