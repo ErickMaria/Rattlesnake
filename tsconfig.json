@@ -10,7 +10,8 @@
         "sourceMap": false
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "core/**/*"
     ],
     "exclude": [
         "node_modules",
