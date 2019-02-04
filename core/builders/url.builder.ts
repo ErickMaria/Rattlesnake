@@ -10,13 +10,15 @@ export class UrlBuilder extends Builder {
 
     builder(data: Array<string>): string{
 
-        let typeConnection = super.builder(data).split(":");
+        let getBuilder = super.builder(data, ',');
+
+        let typeConnection = getBuilder.split(":");
         let token =  ConfigENV.get()['RANCHER_TOKEN'];
         
         if(typeConnection[0] == TypeConnection.WSS){
-            return "wscat -n -c " + "'" + super.builder(data) + "'" + ' --auth ' + token;
+            return "wscat -n -c " + "'" + getBuilder + "'" + ' --auth ' + token;
         }else if(typeConnection[0] == TypeConnection.HTTPS){
-            return `curl -k -H "Authorization: Bearer ${token}" ${super.builder(data)}`;
+            return `curl -k -H "Authorization: Bearer ${token}" ${getBuilder}`;
         }
 
         return "Error on Build";
