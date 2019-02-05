@@ -32,6 +32,7 @@
     "rimraf": "^2.6.3",
     "shelljs": "^0.8.3",
     "slackbots": "^1.2.0",
+    "typescript": "^3.3.1",
     "wscat": "^2.2.1"
   },
   "devDependencies": {
