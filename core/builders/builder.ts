@@ -4,7 +4,7 @@ export abstract class Builder{
         return data.toString().split(pattern);
     }
 
-    builder(data: Array<string>, replace: string, pattern?: string): string{
+    builder(data: any, replace: any, pattern?: string): string{
         return data.toString().replace(pattern, replace);
     }
 }
