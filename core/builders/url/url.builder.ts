@@ -1,16 +1,6 @@
-import { Builder } from "./builder";
-import { ConfigENV } from "../utils/configenv";
-
-enum TypeConnection {
-    WSS = "wss",
-    HTTPS = "https"
-}
-
-export class Params {
-    public namespace: string;
-    public pod: string;
-    public container: string;
-}
+import { Builder } from "../builder";
+import { ConfigENV } from "../../utils/configenv";
+import { TypeConnection } from "./url.type_connection";
 
 export class UrlBuilder extends Builder {
 

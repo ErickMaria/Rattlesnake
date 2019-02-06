@@ -1,4 +1,4 @@
-import { Commands } from "../../core/commads/commands";
+import { Commands } from "../../core/commads/bot.command";
 
 
 console.log(Commands.macth('container list '));

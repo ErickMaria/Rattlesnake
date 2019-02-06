@@ -1,6 +1,8 @@
-import { UrlBuilder, Params } from "../../core/builders/url.builder";
+import { UrlBuilder } from "../../core/builders/url/url.builder";
 import { ConfigENV } from "../../core/utils/configenv";
 
-const params = new Params();
-
-console.log(new UrlBuilder().builder(ConfigENV.get()['RANCHER_KUBENETES_ENDPOINT'], params));
+console.log(new UrlBuilder().builder(ConfigENV.get()['RANCHER_KUBENETES_ENDPOINT'], {
+    namespace:'test',
+    pod: 'testpod-12123e31',
+    container: 'testcontainer'
+}));
