@@ -2,7 +2,7 @@ import { exec } from "shelljs";
 
 
 export class ExecCommand {
-    public exec(data: string): void {
+    public static exec(data: string): void {
         exec(data);
     }
 }

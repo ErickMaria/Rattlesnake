@@ -4,7 +4,7 @@ import { TypeConnection } from "./url.type_connection";
 
 export class UrlBuilder extends Builder {
 
-    builder(url: string, params: Params): string{
+    builder(url: string, params?: Params): string{
 
         let getUrl = super.builder(url, ',');
         
