@@ -1,14 +1,15 @@
 import * as express from 'express'
 import { ConfigENV } from './utils/configenv';
 import { Bot } from './bot/bot';
-import { BotEvents } from './bot/bot.events';
-import { BotActions } from './bot/bot.actions';
+import { BotEvents } from './bot/asserver/bot.events';
+import { BotActions } from './bot/asserver/bot.actions';
 
 export class RattleSnakeBase {
     
     public app: express.Application;
     public runAs: string;
     public loadBot: Bot;
+    public serverBot: any;
     public loadEvents: BotEvents;
     public loadActions: BotActions;
 

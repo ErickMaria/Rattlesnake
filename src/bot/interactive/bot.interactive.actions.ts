@@ -1,5 +1,5 @@
-import { BotEvents } from "../../../core/bot/bot.events";
-import { BotActions } from "../../../core/bot/bot.actions";
+import { BotEvents } from "../../../core/bot/asserver/bot.events";
+import { BotActions } from "../../../core/bot/asserver/bot.actions";
 
 export class BotInteractiveActions extends BotActions {
 

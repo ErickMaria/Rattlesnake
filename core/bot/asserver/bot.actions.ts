@@ -1,4 +1,4 @@
-import { ConfigENV } from "../utils/configenv";
+import { ConfigENV } from "../../utils/configenv";
 const { createMessageAdapter } = require('@slack/interactive-messages'); 
 
 export class BotActions{
