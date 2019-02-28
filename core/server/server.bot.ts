@@ -1,6 +1,6 @@
 import { Server } from "./server";
 import { Bot } from "../bot/bot";
-import { } from "../../src/bot/simple/bot";
+import { } from "../../src/bot/simple/bot.simple";
 
 export class ServerAsBot implements Server{
     

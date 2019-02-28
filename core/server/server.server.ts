@@ -2,7 +2,6 @@ import * as express from 'express'
 import { createServer } from 'http'
 import { ConfigENV } from '../utils/configenv';
 import { Server } from './server';
-import { RattleSnakeBase } from '../rattlesnake.base';
 import { RattleSnake } from '../rattlesnake.bootstrap';
 
 export class ServerAsServer implements Server {
