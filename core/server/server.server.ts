@@ -1,4 +1,3 @@
-import * as express from 'express'
 import { createServer } from 'http'
 import { ConfigENV } from '../utils/configenv';
 import { Server } from './server';
@@ -16,8 +15,10 @@ export class ServerAsServer implements Server {
 
         const HOST = ConfigENV.get()['HOST'];
         const PORT = parseInt(ConfigENV.get()['PORT']);
+        const TypeBotOn = ConfigENV.get()['BOT_CONTEXT'];
 
         createServer(this.server.app).listen(PORT, HOST, () => {
+            console.log(`Bot On as ${TypeBotOn} mode`);
             console.log(`Server running on http://${HOST}:${PORT}`);
         })
     }

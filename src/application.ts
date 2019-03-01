@@ -13,16 +13,15 @@ export class Application extends RattleSnakeBase {
         this.runAs = ConfigENV.get()['APPLICATION_CONTEXT'];
 
         //the below configurations is Optional, but one that is set
-        if (this.runAs === 'BOT') {
-            // load your bot class by default is loaded BotSimple
-            this.loadBot = new BotSimple();
-        }
-        if(this.runAs === 'SERVER'){
-            // Set your Event e Action from slack bot as Server running
-            const Bot = new BotServer();
-            this.loadEvents = new BotInteractiveEvents(Bot);
-            this.loadActions = new BotInteractiveActions();
-        }
+
+
+        // load your bot class by default is loaded BotSimple
+        //this.loadBot = new BotSimple();
+
+        // Set your Event e Action from slack bot as Server running
+        const Bot = new BotServer(ConfigENV.get()['BOT_CONTEXT']);
+        this.loadEvents = new BotInteractiveEvents(Bot);
+        this.loadActions = new BotInteractiveActions();
     }
 
 }
