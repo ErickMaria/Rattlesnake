@@ -7,6 +7,5 @@ ExecCommand.exec(
         namespace:'test',
         pod: 'testpod-12123e31',
         container: 'testcontainer'
-    
     })
 );

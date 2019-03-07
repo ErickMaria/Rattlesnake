@@ -12,4 +12,4 @@ console.log(new UrlBuilder().builder(ConfigENV.get()['RANCHER_KUBENETES_ENDPOINT
 
 console.log('\n');
 
-console.log(new UrlBuilder().builder(ConfigENV.get()['RANCHER_ENDPOINT']));
+console.log(new UrlBuilder().builder(`${ConfigENV.get()['RANCHER_ENDPOINT']}/`));
