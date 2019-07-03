@@ -1,8 +1,9 @@
 import { Loader } from "./loader";
-import { Server } from "../server/server";
+
+import { Server } from "../server";
 
 const load  = new Loader();
 
 const server: Server = load.loadServerAs();
 
-server.run();
+server.load();

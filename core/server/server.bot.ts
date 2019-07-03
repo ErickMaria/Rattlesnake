@@ -1,6 +1,5 @@
 import { Server } from "./server";
 import { Bot } from "../bot/bot";
-import { } from "../../src/bot/simple/bot.simple";
 
 export class ServerAsBot implements Server{
     
@@ -10,9 +9,8 @@ export class ServerAsBot implements Server{
         this.bot = bot;
     }
 
-    run(): void {
+    load(): void {
         this.bot.run();
-
         console.log("Bot's running");
     }
 

@@ -1,3 +1,3 @@
-export interface Bot{
+export interface Bot {
     run(): void;
 }
